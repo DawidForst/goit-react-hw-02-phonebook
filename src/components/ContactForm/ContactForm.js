@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
-import css from "../App.module.css";
+import css from "./ContactForm.module.css";
 
 function ContactForm({ contacts, onSubmit }) {
   const [name, setName] = useState("");
@@ -26,7 +26,7 @@ function ContactForm({ contacts, onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const contactExists = contacts.some((contact) => contact.name === name);
+    const contactExists = contacts.some((contact) => contact.name.toLowerCase() == name.toLowerCase());
 
     if (contactExists) {
       alert(`${name} is already in contacts`);

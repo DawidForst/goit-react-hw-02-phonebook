@@ -1,4 +1,4 @@
-import css from "../App.module.css";
+import css from "./ContactListItem.module.css";
 
 function ContactListItem({ name, number, onDelete }) {
   return (

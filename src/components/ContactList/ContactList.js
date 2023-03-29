@@ -1,4 +1,4 @@
-import ContactListItem from './ContactListItem';
+import ContactListItem from '../../components/ContactListItem/ContactListItem';
 
 function ContactList({ contacts, onDelete }) {
   return (
